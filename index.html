@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="fr">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Annuaire Pokémon</title>
+	<!-- API Pokémon : https://pokeapi.co/docs/v2 -->
+</head>
+<body>
+	<dir>
+		<h1>Ceci est un titre</h1>
+	</dir>
+	<div class="navbar">
+		<button class="navbar-button" onclick="getContent('berries-content');">Baies</button>
+		<button class="navbar-button" onclick="getContent('pokemon-content');">Pokémons</button>
+	</div>
+	<div id="berries-content" class="div-content">
+		<h2>Baies !</h2>
+		Voici des baies !
+		<button id="berries" onclick="getJson('berry');">Voir les baies</button>
+		<div id="berriesDiv"></div>
+		<div id="berryDiv">
+			<button id="sendBerry" onclick="screenBerry()">Valider</button>
+		</div>
+	</div>
+	<div id="pokemon-content" class="div-content">
+		<h2>Pokémons !</h2>
+		<form>
+			Rechercher un Pokémon : <br>
+			<input type="text" id="inputUserPokemon" placeholder="Entrer un nom ou un numéro de pokedex"><br>
+			<input type="button" value="Rechercher" name="button" onclick="getInputPokemon();"></button>
+		</form>
+		<div id="pokemonDivID"></div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+
+
+
+</html>
